@@ -12,12 +12,16 @@ public class ScoreManager : Singleton<ScoreManager>
 
     public Action<float> OnChange;
     public Action OnEmpty;
-    public bool isEmpty { get { return Score == 0; } }
+    public bool IsEmpty { get { return Score == 0; } }
 
+    private void Start()
+    {
+        OnEmpty += LevelManager.Instance.StartGame;
+    }
 
     private void Update()
     {
-        if(!isEmpty)
+        if(!IsEmpty)
             Change(-Time.deltaTime * DecreaseSpeed);
     }
 
