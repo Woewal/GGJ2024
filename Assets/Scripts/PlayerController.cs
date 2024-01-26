@@ -12,10 +12,14 @@ public class PlayerController : MonoBehaviour
 	[SerializeField]
 	private float sprintSpeed = 7.5f;
 	[SerializeField]
+	private bool canJump = false;
+	[SerializeField]
 	private float jumpForce = 8f;
 	[SerializeField]
 	private float gravity = 30f;
 	private Vector3 moveDir = Vector3.zero;
+	[SerializeField]
+	private float maxDistance = 2f;
 
 	private void Start()
 	{
@@ -35,23 +39,20 @@ public class PlayerController : MonoBehaviour
 			moveDir *= speed;
 
 			//Jumps if the player presses the Jump button
-			if (Input.GetButtonDown("Jump"))
+			if (Input.GetButtonDown("Jump") && canJump)
 			{
 				moveDir.y = jumpForce;
 			}
 		}
 
         //Controls player speed
-        if (canSprint)
-        {
-			if (Input.GetKey(KeyCode.LeftShift))
-			{
-				speed = sprintSpeed;
-			}
-			else
-			{
-				speed = normalSpeed;
-			}
+		if (Input.GetKey(KeyCode.LeftShift) && canSprint)
+		{
+			speed = sprintSpeed;
+		}
+		else
+		{
+			speed = normalSpeed;
 		}
 
 		transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
@@ -60,5 +61,13 @@ public class PlayerController : MonoBehaviour
 		moveDir.y -= gravity * Time.deltaTime;
 
 		controller.Move(moveDir * Time.deltaTime);
+		if(gameObject.transform.position.x <= -maxDistance)
+        {
+			gameObject.transform.position = new Vector2(-maxDistance, gameObject.transform.position.y);
+        }
+		if (gameObject.transform.position.x >= maxDistance)
+		{
+			gameObject.transform.position = new Vector2(maxDistance, gameObject.transform.position.y);
+		}
 	}
 }

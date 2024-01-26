@@ -485,10 +485,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSprint: 1
-  normalSpeed: 5
-  sprintSpeed: 7.5
+  normalSpeed: 8
+  sprintSpeed: 12
+  canJump: 1
   jumpForce: 8
   gravity: 30
+  maxDistance: 3
 --- !u!143 &1969595913
 CharacterController:
   m_ObjectHideFlags: 0
