@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ScoreManager : Singleton<ScoreManager>
 {
-    public float Score = MaxScore;
     public const float MaxScore = 100;
+    public float Score = MaxScore / 2;
 
     public float DecreaseSpeed = 1;
 
@@ -16,7 +16,7 @@ public class ScoreManager : Singleton<ScoreManager>
 
     private void Start()
     {
-        OnEmpty += LevelManager.Instance.StartGame;
+        OnEmpty += LevelManager.Instance.LoadMenu;
     }
 
     private void Update()
