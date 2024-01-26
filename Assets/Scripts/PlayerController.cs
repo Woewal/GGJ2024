@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
 			speed = normalSpeed;
 		}
 
-		transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
+		//transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
 
 		//Add gravity
 		moveDir.y -= gravity * Time.deltaTime;
