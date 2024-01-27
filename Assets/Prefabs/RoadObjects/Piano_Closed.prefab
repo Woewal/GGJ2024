@@ -166,4 +166,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound:
-  - {fileID: 8300000, guid: d9598a488e802484db445f85ab86f1ea, type: 3}
+  - {fileID: 8300000, guid: 19e5ac1aed01f1d86bdb505be84a07c4, type: 3}
+  - {fileID: 8300000, guid: b0cf99a5d2fbdb4f79562e6ecd59044f, type: 3}
