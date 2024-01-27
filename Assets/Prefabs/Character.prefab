@@ -54,7 +54,8 @@ MonoBehaviour:
   canJump: 1
   jumpForce: 8
   gravity: 30
-  maxDistance: 20
+  maxDistanceHorizontal: 2
+  maxDistanceVertical: 2
 --- !u!143 &6498840712089062528
 CharacterController:
   m_ObjectHideFlags: 0
@@ -175,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7283046460170390552, guid: e838b520883fa284a9e3e4ea7b49a502, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3092819
+      value: 0.0038
       objectReference: {fileID: 0}
     - target: {fileID: -2335751251223409185, guid: e838b520883fa284a9e3e4ea7b49a502, type: 3}
       propertyPath: m_LocalPosition.x
@@ -215,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7670599852261261522, guid: e838b520883fa284a9e3e4ea7b49a502, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2681836
+      value: -0.0029
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
