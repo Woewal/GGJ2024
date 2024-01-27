@@ -33,8 +33,8 @@ public class RoadObjectRandomizer : MonoBehaviour
         transform.position += new Vector3(0, 0, roadDepthSize * totalRoads * scaling);
         foreach (var o in Obstacles)
         {
-            float newX = Random.Range(-roadDepthSize * 0.8f, roadDepthSize * 0.8f);
-            float newZ = Random.Range(roadDepthSize * 1.1f, roadDepthSize * 1.9f);
+            float newX = Random.Range(-roadWidth * 0.8f, roadWidth * 0.8f);
+            float newZ = Random.Range(roadDepthSize * 0.6f, roadDepthSize * 1.4f);
             o.transform.position = new Vector3(newX, 0, newZ);
         }
     }
@@ -42,6 +42,9 @@ public class RoadObjectRandomizer : MonoBehaviour
     void Update()
     {
         transform.position -= new Vector3(0, 0, 1) * speed * Time.deltaTime;
-        if (transform.position.z < (-roadDepthSize * scaling)) RespawnPlane();
+        if (transform.position.z < (-roadDepthSize * scaling)) {
+
+            RespawnPlane();
+        }
     }
 }
