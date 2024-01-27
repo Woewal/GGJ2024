@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 674530fe91e9c68549ab3780ea3c1527, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 674530fe91e9c68549ab3780ea3c1527, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 674530fe91e9c68549ab3780ea3c1527, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 674530fe91e9c68549ab3780ea3c1527, type: 3}
       propertyPath: m_LocalPosition.x
@@ -103,8 +103,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.46390387, y: 0.6, z: 1.4503525}
-  m_Center: {x: 0, y: 0.3, z: 0}
+  m_Size: {x: 0.46390387, y: 1.3118033, z: 1.4503525}
+  m_Center: {x: 0, y: 0.6559017, z: 0}
 --- !u!114 &7610319345439397622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,3 +119,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSound:
   - {fileID: 8300000, guid: e2f78b074b4fc90e8b5c84216939439d, type: 3}
+  IsPositive: 1
