@@ -33,7 +33,7 @@ public class PlayerHit : MonoBehaviour
         audioSource.Play();
         Destroy(audioObject, audioSource.clip.length);
 
-        GameObject  laughObject = new GameObject("DynamicAudioSource");
+        GameObject laughObject = new GameObject("DynamicAudioSource");
         AudioSource laughSource = laughObject.AddComponent<AudioSource>();
         laughSource.volume = .4f;
         laughSource.clip = laughSound;

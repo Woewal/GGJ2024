@@ -33,16 +33,19 @@ public class RoadObjectRandomizer : MonoBehaviour
     void RespawnPlane()
     {
         print(spawnedObstacles);
-        if (spawnedObstacles != null) {
-            foreach (var o in spawnedObstacles) {
+        if (spawnedObstacles != null)
+        {
+            foreach (var o in spawnedObstacles)
+            {
                 spawnedObstacles.Remove(o);
                 Destroy(o);
             }
         }
-        
+
         transform.position += new Vector3(0, 0, roadDepthSize * totalRoads * scaling);
-        
-        for(int i = 0; i < spawningObstaclesCount; i++) {
+
+        for (int i = 0; i < spawningObstaclesCount; i++)
+        {
             GameObject randomObstacle = Obstacles[Random.Range(0, Obstacles.Length)];
             float newX = Random.Range(-roadWidth * 0.8f, roadWidth * 0.8f);
             float newZ = Random.Range(roadDepthSize * 0.6f, roadDepthSize * 1.4f);
@@ -51,7 +54,7 @@ public class RoadObjectRandomizer : MonoBehaviour
             GameObject newSpawn = Instantiate(randomObstacle, randomPosition, randomAngle, this.gameObject.transform);
             spawnedObstacles.Add(newSpawn);
         }
-        
+
     }
 
     void Update()
@@ -62,8 +65,9 @@ public class RoadObjectRandomizer : MonoBehaviour
         //         o.transform.position -= new Vector3(0, 0, 1) * speed * Time.deltaTime;
         //     } 
         // }
-        
-        if(transform.position.z < (-roadDepthSize * scaling)) {
+
+        if (transform.position.z < (-roadDepthSize * scaling))
+        {
             RespawnPlane();
         }
     }
