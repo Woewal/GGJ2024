@@ -8,6 +8,7 @@ public class PlayerHit : MonoBehaviour
     public Animator Animator;
     [SerializeField] List<AudioClip> hitSounds;
     [SerializeField] AudioClip laughSound;
+    [SerializeField] GameObject StarEffect;
 
     private void Update()
     {
@@ -21,6 +22,9 @@ public class PlayerHit : MonoBehaviour
     {
         var randomClip = hitSounds[Random.Range(0, hitSounds.Count)];
         ScoreManager.Instance.ChangeRating(amount);
+
+        var starEffect = Instantiate(StarEffect);
+        starEffect.transform.position = transform.position;
 
         Animator.transform.DOPunchScale(Vector3.one * .3f, 0.1f, 0, 0);
 
