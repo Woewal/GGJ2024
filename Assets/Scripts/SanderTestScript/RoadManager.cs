@@ -22,7 +22,7 @@ public class RoadManager : MonoBehaviour
         }
 
         startPoint = 0;
-        distanceBetweenRoads = Roads[0].transform.localScale.x / 500;
+        distanceBetweenRoads = Roads[0].transform.localScale.x;
         foreach (var road in Roads)
         {
             road.transform.position = new Vector3(0, 0, startPoint);
