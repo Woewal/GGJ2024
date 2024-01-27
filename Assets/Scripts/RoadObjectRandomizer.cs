@@ -43,7 +43,7 @@ public class RoadObjectRandomizer : MonoBehaviour
         transform.position += new Vector3(0, 0, roadDepthSize * totalRoads * scaling);
         
         for(int i = 0; i < spawningObstaclesCount; i++) {
-            GameObject randomObstacle = Obstacles[Random.Range(0, Obstacles.Length - 1)];
+            GameObject randomObstacle = Obstacles[Random.Range(0, Obstacles.Length)];
             float newX = Random.Range(-roadWidth * 0.8f, roadWidth * 0.8f);
             float newZ = Random.Range(roadDepthSize * 0.6f, roadDepthSize * 1.4f);
             Vector3 randomPosition = new Vector3(newX, 0, newZ);
