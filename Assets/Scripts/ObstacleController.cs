@@ -21,7 +21,7 @@ public class ObstacleController : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        var animationLength = 5f;
+        var animationLength = 2f;
         transform.DOMove(new Vector3(Random.Range(-5, 5), Random.Range(10, 30), Random.Range(10, 20)), animationLength);
         transform.DOScale(Vector3.zero, animationLength);
         AudioSource.PlayClipAtPoint(hitSound[Random.Range(0, hitSound.Count)], transform.position);
