@@ -7,6 +7,9 @@ public class RoadObjectRandomizer : MonoBehaviour
     GameObject RoadManagerObject;
     public GameObject[] Obstacles;
     public float speed = 250;
+    const int spawningObstaclesCount = 10;
+
+    public List<GameObject> spawnedObstacles;
 
     private int totalRoads;
     private float scaling;
@@ -29,21 +32,38 @@ public class RoadObjectRandomizer : MonoBehaviour
 
     void RespawnPlane()
     {
+        print(spawnedObstacles);
+        if (spawnedObstacles != null) {
+            foreach (var o in spawnedObstacles) {
+                spawnedObstacles.Remove(o);
+                Destroy(o);
+            }
+        }
         
         transform.position += new Vector3(0, 0, roadDepthSize * totalRoads * scaling);
-        foreach (var o in Obstacles)
-        {
+        
+        for(int i = 0; i < spawningObstaclesCount; i++) {
+            GameObject randomObstacle = Obstacles[Random.Range(0, Obstacles.Length - 1)];
             float newX = Random.Range(-roadWidth * 0.8f, roadWidth * 0.8f);
             float newZ = Random.Range(roadDepthSize * 0.6f, roadDepthSize * 1.4f);
-            o.transform.position = new Vector3(newX, 0, newZ);
+            Vector3 randomPosition = new Vector3(newX, 0, newZ);
+            Quaternion randomAngle = Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
+            GameObject newSpawn = Instantiate(randomObstacle, randomPosition, randomAngle, this.gameObject.transform);
+            spawnedObstacles.Add(newSpawn);
         }
+        
     }
 
     void Update()
     {
         transform.position -= new Vector3(0, 0, 1) * speed * Time.deltaTime;
-        if (transform.position.z < (-roadDepthSize * scaling)) {
-
+        // if (spawnedObstacles != null) {
+        //     foreach(var o in spawnedObstacles) {
+        //         o.transform.position -= new Vector3(0, 0, 1) * speed * Time.deltaTime;
+        //     } 
+        // }
+        
+        if(transform.position.z < (-roadDepthSize * scaling)) {
             RespawnPlane();
         }
     }
