@@ -56,10 +56,12 @@ public class ScoreManager : Singleton<ScoreManager>
     public Action OnRatingEmpty;
     public bool IsEmpty { get { return Rating == 0; } }
 
+    public Transform Highscore;
+
     private void Start()
     {
-        OnRatingEmpty += LevelManager.Instance.LoadMenu;
         StartCoroutine(ScoreChange());
+        OnRatingEmpty += () => Highscore.gameObject.SetActive(true);
     }
 
     private void Update()
