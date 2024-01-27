@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RoadObjectRandomizer : MonoBehaviour
@@ -42,9 +40,6 @@ public class RoadObjectRandomizer : MonoBehaviour
     void Update()
     {
         transform.position -= new Vector3(0, 0, 1) * speed * Time.deltaTime;
-        if (transform.position.z < (-roadDepthSize * scaling)) {
-
-            RespawnPlane();
-        }
+        if (transform.position.z < (-roadDepthSize * scaling)) RespawnPlane();
     }
 }
