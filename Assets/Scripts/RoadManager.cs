@@ -17,7 +17,7 @@ public class RoadManager : MonoBehaviour
     {
         for (int i = 0; i < amountOfRoads; i++)
         {
-            GameObject tempRoad =  Instantiate(Road, gameObject.transform);
+            GameObject tempRoad = Instantiate(Road, gameObject.transform);
             Roads.Add(tempRoad);
         }
 
@@ -33,6 +33,6 @@ public class RoadManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
