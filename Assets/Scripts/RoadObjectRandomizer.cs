@@ -32,7 +32,6 @@ public class RoadObjectRandomizer : MonoBehaviour
 
     void RespawnPlane()
     {
-        print(spawnedObstacles);
         if (spawnedObstacles != null) {
             foreach (var o in spawnedObstacles) {
                 spawnedObstacles.Remove(o);

@@ -36,6 +36,8 @@ public class ScoreManager : Singleton<ScoreManager>
         }
     }
 
+    float currentTime = 0;
+
     private int _score;
     public int Score
     {
@@ -49,7 +51,7 @@ public class ScoreManager : Singleton<ScoreManager>
         }
     }
 
-    public float DecreaseSpeed = 1;
+    public AnimationCurve DecreaseSpeed;
 
     public Action<float> OnRatingChange;
     public Action<int> OnScoreChange;
@@ -65,8 +67,9 @@ public class ScoreManager : Singleton<ScoreManager>
 
     private void Update()
     {
-        if(!IsEmpty)
-            ChangeRating(-Time.deltaTime * DecreaseSpeed);
+        if(!IsEmpty)                                                                                                                                                                                                                                                                                                                                                                ChangeRating(-Time.deltaTime * DecreaseSpeed.Evaluate(currentTime));
+
+        currentTime += Time.deltaTime;
     }
 
     public void ChangeRating(float amount)
