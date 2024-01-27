@@ -17,10 +17,10 @@ public class PlayerHit : MonoBehaviour
         }
     }
 
-    public void Hit()
+    public void Hit(float amount = 5.5f)
     {
         var randomClip = hitSounds[Random.Range(0, hitSounds.Count)];
-        ScoreManager.Instance.ChangeRating(5.5f);
+        ScoreManager.Instance.ChangeRating(amount);
 
         Animator.transform.DOPunchScale(Vector3.one * .3f, 0.1f, 0, 0);
 

@@ -21,10 +21,13 @@ public class TomatoThrower : MonoBehaviour
         {
             yield return new WaitForSeconds(3);
 
-            var tomato = Instantiate(TomatoPrefab);
-            tomato.transform.position = ThrowTransforms[Random.Range(0, ThrowTransforms.Count)].position + Vector3.up * 1.8f;
+            if (ScoreManager.Instance.Rating / ScoreManager.MaxRating < 0.5f)
+            {
+                var tomato = Instantiate(TomatoPrefab);
+                tomato.transform.position = ThrowTransforms[Random.Range(0, ThrowTransforms.Count)].position + Vector3.up * 1.8f;
 
-            tomato.SetDestination(new Vector3(Random.Range(-HorizontalMovement, HorizontalMovement), 0, Random.Range(-VerticalMovement, VerticalMovement)));
+                tomato.SetDestination(new Vector3(Random.Range(-HorizontalMovement, HorizontalMovement), 0, Random.Range(-VerticalMovement, VerticalMovement)));
+            }
         }
 
 
