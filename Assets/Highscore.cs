@@ -94,6 +94,31 @@ public class Highscore : MonoBehaviour
             fileStream.Close();
         }
     }
+
+    public static int GetHighestScore()
+    {
+        var highestScore = 0;
+
+        if (File.Exists(Application.persistentDataPath + "/scores.dat"))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream fileStream = File.Open(Application.persistentDataPath + "/scores.dat", FileMode.Open);
+
+            try
+            {
+                ScoreData data = (ScoreData)formatter.Deserialize(fileStream);
+                highestScore = data.scores[0].Item2;
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("Error loading scores: " + e.Message);
+            }
+
+            fileStream.Close();
+        }
+
+        return highestScore;
+    }
 }
 
 [Serializable]

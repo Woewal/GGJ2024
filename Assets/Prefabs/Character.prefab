@@ -103,6 +103,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d76b57563fcc1c14bae4da0d0a3115f8, type: 3}
   - {fileID: 8300000, guid: 957b599a3fe31c94abc63ad263846252, type: 3}
   laughSound: {fileID: 0}
+  StarEffect: {fileID: 5318070746818163694, guid: 24be0c87a4937bb41acf676c0bff707d, type: 3}
 --- !u!136 &2506793675075751947
 CapsuleCollider:
   m_ObjectHideFlags: 0
