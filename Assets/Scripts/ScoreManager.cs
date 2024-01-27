@@ -60,7 +60,6 @@ public class ScoreManager : Singleton<ScoreManager>
 
     private void Start()
     {
-        StartCoroutine(ScoreChange());
         OnRatingEmpty += () => Highscore.gameObject.SetActive(true);
     }
 
@@ -68,16 +67,6 @@ public class ScoreManager : Singleton<ScoreManager>
     {
         if(!IsEmpty)
             ChangeRating(-Time.deltaTime * DecreaseSpeed);
-    }
-
-    IEnumerator ScoreChange()
-    {
-        while(true)
-        {
-            Score += 1;
-            yield return new WaitForSeconds(1);
-        }
-
     }
 
     public void ChangeRating(float amount)

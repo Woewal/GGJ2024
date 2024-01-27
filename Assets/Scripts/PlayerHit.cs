@@ -35,6 +35,7 @@ public class PlayerHit : MonoBehaviour
 
         GameObject  laughObject = new GameObject("DynamicAudioSource");
         AudioSource laughSource = laughObject.AddComponent<AudioSource>();
+        laughSource.volume = .4f;
         laughSource.clip = laughSound;
 
         laughSource.pitch = Random.Range(0.9f, 1.2f);
