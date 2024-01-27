@@ -47,7 +47,8 @@ public class RoadObjectRandomizer : MonoBehaviour
             float newX = Random.Range(-roadWidth * 0.8f, roadWidth * 0.8f);
             float newZ = Random.Range(roadDepthSize * 0.6f, roadDepthSize * 1.4f);
             Vector3 randomPosition = new Vector3(newX, 0, newZ);
-            GameObject newSpawn = Instantiate(randomObstacle, randomPosition, Quaternion.identity, this.gameObject.transform);
+            Quaternion randomAngle = Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
+            GameObject newSpawn = Instantiate(randomObstacle, randomPosition, randomAngle, this.gameObject.transform);
             spawnedObstacles.Add(newSpawn);
         }
         
