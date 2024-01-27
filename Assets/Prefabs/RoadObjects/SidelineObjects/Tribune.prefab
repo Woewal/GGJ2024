@@ -229,6 +229,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 853005810329556644}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 057f12724da0f1545bb8527665b08cfd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3714195273608267483}
     - targetCorrespondingSourceObject: {fileID: 4627575533841647452, guid: 057f12724da0f1545bb8527665b08cfd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1724542041313259271}
@@ -269,6 +272,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+--- !u!1 &1757289601273285256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 057f12724da0f1545bb8527665b08cfd, type: 3}
+  m_PrefabInstance: {fileID: 1486834686615156697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3714195273608267483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757289601273285256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3a21838a554e948ae3367dfd564218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TomatoPrefab: {fileID: 7466256271161222808, guid: 781fe72e5338382418b2c38672369025, type: 3}
+  ThrowTransforms:
+  - {fileID: 3528170629833321269}
+  - {fileID: 5076973101252622098}
+  - {fileID: 5676964001816759123}
+  - {fileID: 6112598405700582432}
+  - {fileID: 709702836083062545}
+  - {fileID: 7382745159821649499}
+  - {fileID: 1005252811914490265}
+  - {fileID: 5427357085590420702}
+  - {fileID: 3840476388935797238}
+  - {fileID: 7449788342772762602}
+  - {fileID: 853005810329556644}
+  CharacterController: {fileID: 0}
+  HorizontalMovement: 10.5
+  VerticalMovement: 6
 --- !u!1 &1821200807050134732 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8222314832531279083, guid: 057f12724da0f1545bb8527665b08cfd, type: 3}
