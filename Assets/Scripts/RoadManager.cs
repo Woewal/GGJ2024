@@ -11,6 +11,7 @@ public class RoadManager : MonoBehaviour
     private float startPoint;
     public float distanceBetweenRoads;
     public float defaultRoadSize = 75;
+    public bool disableObjectSpawn = false;
 
     // Start is called before the first frame update
     void Start()
