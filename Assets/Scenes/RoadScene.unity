@@ -382,7 +382,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 3
+      value: 1
       inSlope: 0.0007338719
       outSlope: 0.0007338719
       tangentMode: 0
@@ -391,7 +391,7 @@ MonoBehaviour:
       outWeight: 0.09329223
     - serializedVersion: 3
       time: 60
-      value: 8
+      value: 6.5
       inSlope: 0.13825823
       outSlope: 0.13825823
       tangentMode: 0
@@ -1321,7 +1321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3968116994312763043, guid: e4815aade3e756f4b8db2deef6cefcd2, type: 3}
       propertyPath: maxDistanceHorizontal
-      value: 6
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 9040985224640010673, guid: e4815aade3e756f4b8db2deef6cefcd2, type: 3}
       propertyPath: m_Name
