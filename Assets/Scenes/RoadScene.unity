@@ -3837,6 +3837,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tribune
       objectReference: {fileID: 0}
+    - target: {fileID: 1835170812034994203, guid: ca1bf2826583cf947bf23ade8b038122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 087721f442172014bb828771775a9253, type: 2}
+    - target: {fileID: 3196115133873648549, guid: ca1bf2826583cf947bf23ade8b038122, type: 3}
+      propertyPath: m_Volume
+      value: 0.133
+      objectReference: {fileID: 0}
+    - target: {fileID: 4062291967306096867, guid: ca1bf2826583cf947bf23ade8b038122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 849239809452fb8448cdb4eb1bad2127, type: 2}
+    - target: {fileID: 4140525051890205010, guid: ca1bf2826583cf947bf23ade8b038122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cf8a831babd950242a9a2ade3c918aa5, type: 2}
+    - target: {fileID: 5976767193474586256, guid: ca1bf2826583cf947bf23ade8b038122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d3910b76e199665428e8a453dae01114, type: 2}
+    - target: {fileID: 6112688991216824749, guid: ca1bf2826583cf947bf23ade8b038122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cf8a831babd950242a9a2ade3c918aa5, type: 2}
+    - target: {fileID: 6258737925827301400, guid: ca1bf2826583cf947bf23ade8b038122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 087721f442172014bb828771775a9253, type: 2}
+    - target: {fileID: 7660274343815540479, guid: ca1bf2826583cf947bf23ade8b038122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 21f31d588bbcdd540b9f7e05e15805ea, type: 2}
+    - target: {fileID: 8067154734094257212, guid: ca1bf2826583cf947bf23ade8b038122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 849239809452fb8448cdb4eb1bad2127, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

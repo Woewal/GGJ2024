@@ -26,7 +26,7 @@ public class PlayerHit : MonoBehaviour
         var starEffect = Instantiate(StarEffect);
         starEffect.transform.position = transform.position;
 
-        Animator.transform.DOPunchScale(Vector3.one * .3f, 0.1f, 0, 0);
+        Animator.transform.DOPunchScale(Vector3.one * .3f, 0.1f, 0, 0).OnComplete(() => Animator.transform.localScale = Vector3.one);
 
         GameObject audioObject = new GameObject("DynamicAudioSource");
         AudioSource audioSource = audioObject.AddComponent<AudioSource>();

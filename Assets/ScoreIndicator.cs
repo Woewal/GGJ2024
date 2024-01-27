@@ -8,11 +8,20 @@ public class ScoreIndicator : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI ScoreText;
 
+    int highestScore;
+
+
     private void Start()
     {
-        ScoreManager.Instance.OnScoreChange += (amount) => { 
-            ScoreText.text = amount.ToString(); 
-            transform.DOPunchScale(Vector3.one, 0.1f, 5, 1); 
-        };
+        highestScore = Highscore.GetHighestScore();
+
+        UpdateScore(0);
+
+        ScoreManager.Instance.OnScoreChange += UpdateScore;
+    }
+
+    private void UpdateScore(int amount)
+    {
+        ScoreText.text = "Score: " + amount.ToString() + "\n" + "Highest score: " + highestScore;
     }
 }
