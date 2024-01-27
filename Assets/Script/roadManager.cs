@@ -5,14 +5,14 @@ using UnityEngine;
 public class roadManager : MonoBehaviour
 {
     public GameObject[] obstacles;
-    
-    
-    public float start = 0;
+ 
     public float speed = 250;
+    [SerializeField]
+    private float roadSize = 1500;
 
 
     void respawnPlane(){
-        transform.position += new Vector3(0,0,3000);
+        transform.position += new Vector3(0,0,roadSize * 2);
         foreach (var o in obstacles)
         {
             int newX = Random.Range(-80, 80);
@@ -24,11 +24,6 @@ public class roadManager : MonoBehaviour
     void Update()
     {   
         transform.position -= new Vector3(0,0,1) * speed * Time.deltaTime;
-        if (transform.position[2] < -800) respawnPlane();
-    }
-
-    void Start()
-    {
-        start = transform.position[2];
+        if (transform.position.z < -roadSize) respawnPlane();
     }
 }
