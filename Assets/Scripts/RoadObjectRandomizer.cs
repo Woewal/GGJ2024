@@ -32,8 +32,10 @@ public class RoadObjectRandomizer : MonoBehaviour
 
     void RespawnPlane()
     {
-        if (spawnedObstacles != null)                                                                            {
-            for (int i = 0;  i < spawnedObstacles.Count; i++)                  {
+        if (spawnedObstacles != null)
+        {
+            for (int i = 0; i < spawnedObstacles.Count; i++)
+            {
                 Destroy(spawnedObstacles[i]);
             }
             spawnedObstacles.Clear();
@@ -47,6 +49,8 @@ public class RoadObjectRandomizer : MonoBehaviour
             float newX = Random.Range(-roadWidth * 0.8f, roadWidth * 0.8f);
             float newZ = Random.Range(roadDepthSize * 0.6f, roadDepthSize * 1.4f);
             Vector3 randomPosition = new Vector3(newX, 0, newZ);
+            if (newX > 5 || newX < -5) randomPosition += new Vector3(0, 0.2f, 0);
+
             Quaternion randomAngle = Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
             GameObject newSpawn = Instantiate(randomObstacle, randomPosition, randomAngle, this.gameObject.transform);
             spawnedObstacles.Add(newSpawn);
