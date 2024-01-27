@@ -19,7 +19,9 @@ public class PlayerController : MonoBehaviour
 	private float gravity = 30f;
 	private Vector3 moveDir = Vector3.zero;
 	[SerializeField]
-	private float maxDistance = 2f;
+	private float maxDistanceHorizontal = 2f;
+	[SerializeField]
+	private float maxDistanceVertical = 2f;
 
 	private void Start()
 	{
@@ -32,7 +34,7 @@ public class PlayerController : MonoBehaviour
 		CharacterController controller = gameObject.GetComponent<CharacterController>();
 		if (controller.isGrounded)
 		{
-			moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+			moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
 			moveDir = transform.TransformDirection(moveDir);
 
@@ -61,13 +63,25 @@ public class PlayerController : MonoBehaviour
 		moveDir.y -= gravity * Time.deltaTime;
 
 		controller.Move(moveDir * Time.deltaTime);
-		if(gameObject.transform.position.x <= -maxDistance)
+
+		//Setting the max distance for going left and right
+		if(gameObject.transform.position.x <= -maxDistanceHorizontal)
         {
-			gameObject.transform.position = new Vector3(-maxDistance, gameObject.transform.position.y, gameObject.transform.position.z);
+			gameObject.transform.position = new Vector3(-maxDistanceHorizontal, gameObject.transform.position.y, gameObject.transform.position.z);
         }
-		if (gameObject.transform.position.x >= maxDistance)
+		if (gameObject.transform.position.x >= maxDistanceHorizontal)
 		{
-			gameObject.transform.position = new Vector3(maxDistance, gameObject.transform.position.y, gameObject.transform.position.z);
+			gameObject.transform.position = new Vector3(maxDistanceHorizontal, gameObject.transform.position.y, gameObject.transform.position.z);
+		}
+
+		//Setting the max distance for going forward and backward
+		if (gameObject.transform.position.z <= -maxDistanceVertical)
+		{
+			gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -maxDistanceVertical);
+		}
+		if (gameObject.transform.position.z >= maxDistanceVertical)
+		{
+			gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, maxDistanceVertical);
 		}
 	}
 }
