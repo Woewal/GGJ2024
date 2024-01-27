@@ -13,10 +13,10 @@ public class Booing : MonoBehaviour
     {
         ScoreManager = ScoreManager.Instance;
 
-        ScoreManager.OnChange += ChangeVolume;
+        ScoreManager.OnRatingChange += ChangeVolume;
     }
 
     void ChangeVolume (float amount) {
-        BooSource.volume = Curve.Evaluate(amount / ScoreManager.MaxScore);
+        BooSource.volume = Curve.Evaluate(amount / ScoreManager.MaxRating);
     }
 }

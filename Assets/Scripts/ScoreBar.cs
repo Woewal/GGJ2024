@@ -15,17 +15,17 @@ public class ScoreBar : MonoBehaviour
     {
         ScoreManager = ScoreManager.Instance;
 
-        ScoreManager.OnChange += UpdateBarImage;
+        ScoreManager.OnRatingChange += UpdateBarImage;
     }
 
     private void OnDisable()
     {
-        ScoreManager.OnChange -= UpdateBarImage;
+        ScoreManager.OnRatingChange -= UpdateBarImage;
     }
 
     private void UpdateBarImage(float amount)
     {
-        var percentage = amount / ScoreManager.MaxScore;
+        var percentage = amount / ScoreManager.MaxRating;
 
         BarImage.color = Gradient.Evaluate(percentage);
 

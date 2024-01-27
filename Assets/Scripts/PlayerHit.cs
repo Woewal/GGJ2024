@@ -20,7 +20,7 @@ public class PlayerHit : MonoBehaviour
     public void Hit()
     {
         var randomClip = hitSounds[Random.Range(0, hitSounds.Count)];
-        ScoreManager.Instance.Change(10);
+        ScoreManager.Instance.ChangeRating(10);
 
         Animator.transform.DOPunchScale(Vector3.one * .3f, 0.1f, 0, 0);
 

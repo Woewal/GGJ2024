@@ -100,6 +100,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 439b100b77c908646bbced3e540097b4, type: 3}
   - {fileID: 8300000, guid: d76b57563fcc1c14bae4da0d0a3115f8, type: 3}
   - {fileID: 8300000, guid: 957b599a3fe31c94abc63ad263846252, type: 3}
+  laughSound: {fileID: 0}
 --- !u!1001 &9094350731342124412
 PrefabInstance:
   m_ObjectHideFlags: 0
