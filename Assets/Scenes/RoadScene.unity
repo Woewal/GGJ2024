@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DecreaseSpeed: 3
+  Highscore: {fileID: 0}
 --- !u!1 &248259420
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248259420}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2285166, y: 0.000000023689633, z: -0.0000000055606075, w: 0.97354007}
+  m_LocalRotation: {x: 0.2285166, y: -0.000000023689633, z: 0.0000000055606075, w: 0.97354007}
   m_LocalPosition: {x: 0, y: 4.34, z: -4.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -321,6 +322,10 @@ PrefabInstance:
     - target: {fileID: 2721246624139832650, guid: e4815aade3e756f4b8db2deef6cefcd2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968116994312763043, guid: e4815aade3e756f4b8db2deef6cefcd2, type: 3}
+      propertyPath: maxDistance
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 9040985224640010673, guid: e4815aade3e756f4b8db2deef6cefcd2, type: 3}
       propertyPath: m_Name
@@ -1041,7 +1046,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761217617}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2285166, y: 0.000000023689633, z: -0.0000000055606075, w: 0.97354007}
+  m_LocalRotation: {x: 0.2285166, y: -0.000000023689633, z: 0.0000000055606075, w: 0.97354007}
   m_LocalPosition: {x: 0, y: 4.34, z: -4.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1094,7 +1099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Road: {fileID: 2933293816755722124, guid: ea27a6bd59b4f1d44b31c902545a691e, type: 3}
-  amountOfRoads: 2
+  amountOfRoads: 10
   Roads: []
   distanceBetweenRoads: 0
   defaultRoadSize: 75
@@ -1221,7 +1226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4733526504040860496, guid: d864932b985e2494ca069a452d22d0b6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.02
+      value: 18.150002
       objectReference: {fileID: 0}
     - target: {fileID: 4733526504040860496, guid: d864932b985e2494ca069a452d22d0b6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1281,7 +1286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1380622908431372338, guid: ca1bf2826583cf947bf23ade8b038122, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.64
+      value: 10.49
       objectReference: {fileID: 0}
     - target: {fileID: 1380622908431372338, guid: ca1bf2826583cf947bf23ade8b038122, type: 3}
       propertyPath: m_LocalRotation.w
