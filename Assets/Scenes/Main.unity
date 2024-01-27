@@ -1771,8 +1771,8 @@ MonoBehaviour:
   - {fileID: 888008571}
   - {fileID: 1521734203}
   - {fileID: 492490216}
-  start: 0
   speed: 250
+  roadSize: 1500
 --- !u!65 &544774269
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2216,8 +2216,8 @@ MonoBehaviour:
   - {fileID: 1607843755}
   - {fileID: 1483959303}
   - {fileID: 1840738226}
-  start: 0
   speed: 250
+  roadSize: 1500
 --- !u!65 &692469525
 BoxCollider:
   m_ObjectHideFlags: 0
