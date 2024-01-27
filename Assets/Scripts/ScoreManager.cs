@@ -67,7 +67,7 @@ public class ScoreManager : Singleton<ScoreManager>
 
     private void Update()
     {
-        if(!IsEmpty)                                                                                                                                                                                                                                                                                                                                                                ChangeRating(-Time.deltaTime * DecreaseSpeed.Evaluate(currentTime));
+        if(!IsEmpty) ChangeRating(-Time.deltaTime * DecreaseSpeed.Evaluate(currentTime));
 
         currentTime += Time.deltaTime;
     }

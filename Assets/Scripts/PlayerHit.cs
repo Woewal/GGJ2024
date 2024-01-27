@@ -7,16 +7,9 @@ public class PlayerHit : MonoBehaviour
 {
     public Animator Animator;
     [SerializeField] List<AudioClip> hitSounds;
+    [SerializeField] List<AudioClip> goodSounds;
     [SerializeField] AudioClip laughSound;
     [SerializeField] GameObject StarEffect;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Hit();
-        }
-    }
 
     public void Hit(float amount = 5.5f)
     {
@@ -49,5 +42,22 @@ public class PlayerHit : MonoBehaviour
 
         this.Animator.SetTrigger("stumble");
 
+    }
+
+    public void Gain(float amount = 5.5f)
+    {
+        ScoreManager.Instance.ChangeRating(-amount);
+
+        var starEffect = Instantiate(StarEffect);
+        starEffect.transform.position = transform.position;
+
+        GameObject audioObject = new GameObject("DynamicAudioSource");
+        AudioSource audioSource = audioObject.AddComponent<AudioSource>();
+        audioSource.clip = goodSounds[Random.Range(0, goodSounds.Count)];
+
+        audioSource.pitch = Random.Range(0.9f, 1.2f);
+        audioSource.transform.position = transform.position;
+        audioSource.Play();
+        Destroy(audioObject, audioSource.clip.length);
     }
 }
