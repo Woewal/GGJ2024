@@ -33,10 +33,10 @@ public class RoadObjectRandomizer : MonoBehaviour
     void RespawnPlane()
     {
         if (spawnedObstacles != null)                                                                            {
-            foreach (var o in spawnedObstacles)                  {
-                spawnedObstacles.Remove(o);
-                Destroy(o);
+            for (int i = 0;  i < spawnedObstacles.Count; i++)                  {
+                Destroy(spawnedObstacles[i]);
             }
+            spawnedObstacles.Clear();
         }
 
         transform.position += new Vector3(0, 0, roadDepthSize * totalRoads * scaling);
@@ -57,11 +57,6 @@ public class RoadObjectRandomizer : MonoBehaviour
     void Update()
     {
         transform.position -= new Vector3(0, 0, 1) * speed * Time.deltaTime;
-        // if (spawnedObstacles != null) {
-        //     foreach(var o in spawnedObstacles) {
-        //         o.transform.position -= new Vector3(0, 0, 1) * speed * Time.deltaTime;
-        //     } 
-        // }
 
         if (transform.position.z < (-roadDepthSize * scaling))
         {
