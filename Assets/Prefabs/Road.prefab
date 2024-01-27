@@ -137,6 +137,7 @@ MonoBehaviour:
   - {fileID: 798948935150405783}
   - {fileID: 7085006619599728923}
   - {fileID: 2793662730479794848}
+  - {fileID: 5084516716276759923, guid: 4198bacb8c0db435a989579ef58a3018, type: 3}
   speed: 10
   spawnedObstacles: []
 --- !u!1001 &17888861659957668
