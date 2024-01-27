@@ -7,7 +7,7 @@ using DG.Tweening;
 public class ObstacleController : MonoBehaviour
 {
     public List<AudioClip> hitSound;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +23,9 @@ public class ObstacleController : MonoBehaviour
     {
         var animationLength = 5f;
         transform.DOMove(new Vector3(Random.Range(-5, 5),Random.Range(10, 30), Random.Range(10, 20)), animationLength);
-        transform.DOScale(Vector3.zero, animationLength); 
+        transform.DOScale(Vector3.zero, animationLength);
+        AudioSource.PlayClipAtPoint(hitSound[Random.Range(0, hitSound.Count)], transform.position);
+        var Player = collider.gameObject.GetComponent<PlayerHit>();
+        if (Player) Player.Hit();
     }
 }
