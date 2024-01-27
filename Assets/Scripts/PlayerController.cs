@@ -63,11 +63,11 @@ public class PlayerController : MonoBehaviour
 		controller.Move(moveDir * Time.deltaTime);
 		if(gameObject.transform.position.x <= -maxDistance)
         {
-			gameObject.transform.position = new Vector2(-maxDistance, gameObject.transform.position.y);
+			gameObject.transform.position = new Vector3(-maxDistance, gameObject.transform.position.y, gameObject.transform.position.z);
         }
 		if (gameObject.transform.position.x >= maxDistance)
 		{
-			gameObject.transform.position = new Vector2(maxDistance, gameObject.transform.position.y);
+			gameObject.transform.position = new Vector3(maxDistance, gameObject.transform.position.y, gameObject.transform.position.z);
 		}
 	}
 }
