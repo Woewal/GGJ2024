@@ -445,6 +445,15 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0.045489565
       outWeight: 0
+    - serializedVersion: 3
+      time: 119.786156
+      value: 12.787258
+      inSlope: 0.21809559
+      outSlope: 0.21809559
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07946808
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
