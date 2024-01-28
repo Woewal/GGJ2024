@@ -17,6 +17,7 @@ public class Highscore : MonoBehaviour
     [SerializeField] TextMeshProUGUI YourScore;
     [SerializeField] Transform SubmitPanel;
     [SerializeField] ScoreManager ScoreManager;
+    [SerializeField] GameObject LevelUI;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class Highscore : MonoBehaviour
         Score = ScoreManager.Instance.Score;
         DisplayScores();
         YourScore.text = "Your score: " + Score;
+        LevelUI.SetActive(false);
     }
 
     public void AddScore()
@@ -36,6 +38,16 @@ public class Highscore : MonoBehaviour
         SaveScores();
         SubmitPanel.gameObject.SetActive(false);
         DisplayScores();
+    }
+
+    private void OnEnable()
+    {
+        Time.timeScale = 0.1f;
+    }
+
+    private void OnDisable()
+    {
+        Time.timeScale = 1f;
     }
 
     public void SetName(string name) { Name = name; }
