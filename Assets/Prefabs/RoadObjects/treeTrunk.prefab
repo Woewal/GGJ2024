@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSound:
   - {fileID: 8300000, guid: d9598a488e802484db445f85ab86f1ea, type: 3}
+  - {fileID: 8300000, guid: d9598a488e802484db445f85ab86f1ea, type: 3}
   IsPositive: 0
 --- !u!65 &7051458856446352990
 BoxCollider:
@@ -132,7 +133,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetPrefab: {fileID: 3746720372687063315, guid: e2ab24d653657374c8867987b8a70690, type: 3}
-  SplashSound: {fileID: 0}
   SpeedCurve:
     serializedVersion: 2
     m_Curve:
@@ -157,3 +157,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  speed: 10
