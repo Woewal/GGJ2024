@@ -14,6 +14,10 @@ public class Destinations : MonoBehaviour
     [SerializeField]
     private float speed = 10;
 
+    private void Start()
+    {
+        transform.rotation = Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
+    }
     public void SetDestination(Vector3 position)
     {
         var target = Instantiate(TargetPrefab);

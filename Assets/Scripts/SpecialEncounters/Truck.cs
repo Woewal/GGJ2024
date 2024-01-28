@@ -47,7 +47,7 @@ public class Truck : MonoBehaviour
         {
             if (speed > -60) speed -= 0.2f;
             if (speed <= -60) speed = -60;
-            if(transform.position.z >= 200) canThrown = false;
+            if(transform.position.z >= 500) canThrown = false;
             if(transform.position.z >= 700) gameObject.SetActive(false);
             return;
         }
