@@ -365,20 +365,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 60
       value: 6.5
-      inSlope: 0.13825823
-      outSlope: 0.13825823
+      inSlope: 0.14082918
+      outSlope: 0.14082918
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.045489565
-      outWeight: 0
+      outWeight: 0.069012366
     - serializedVersion: 3
-      time: 119.786156
-      value: 12.787258
-      inSlope: 0.21809559
-      outSlope: 0.21809559
+      time: 145.67014
+      value: 11.808459
+      inSlope: 0.09036246
+      outSlope: 0.09036246
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.07946808
+      inWeight: 0.06972463
       outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -3528,6 +3528,7 @@ MonoBehaviour:
   startPointEncounter: 50
   differenceBetweenEncounter: 100
   Truck: {fileID: 451195775337202477}
+  Train: {fileID: 0}
 --- !u!1 &1978827289
 GameObject:
   m_ObjectHideFlags: 0
