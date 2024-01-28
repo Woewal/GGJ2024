@@ -10,6 +10,8 @@ public class ScoreIndicator : MonoBehaviour
 
     int highestScore;
 
+    public GameObject SpecialEncounterObject;
+
 
     private void Start()
     {
@@ -23,5 +25,6 @@ public class ScoreIndicator : MonoBehaviour
     private void UpdateScore(int amount)
     {
         ScoreText.text = "Score: " + amount.ToString() + "\n" + "Highest score: " + highestScore;
+        if (SpecialEncounterObject != null) SpecialEncounterObject.GetComponent<SpecialEncounter>().ScoreChecker(amount);
     }
 }
