@@ -2467,37 +2467,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428526473}
   m_CullTransparentMesh: 1
---- !u!1 &1466485967
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1466485968}
-  m_Layer: 0
-  m_Name: TruckLocation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1466485968
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1466485967}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 660}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497862234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3440,7 +3409,6 @@ MonoBehaviour:
   startPointEncounter: 50
   differenceBetweenEncounter: 100
   Truck: {fileID: 2110082531}
-  TruckLocation: {fileID: 1466485968}
 --- !u!1 &1978827289
 GameObject:
   m_ObjectHideFlags: 0
@@ -4090,6 +4058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Truck
       objectReference: {fileID: 0}
+    - target: {fileID: 7718268621326359362, guid: d5773ba0aa0be744ab8e8a2c77c5a740, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4109,5 +4081,4 @@ SceneRoots:
   - {fileID: 248259422}
   - {fileID: 970475389}
   - {fileID: 74728553}
-  - {fileID: 1466485968}
   - {fileID: 7880793848334653551}
