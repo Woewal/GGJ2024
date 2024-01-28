@@ -16,9 +16,12 @@ public class RoadObjectRandomizer : MonoBehaviour
     private float roadDepthSize;
     private float roadWidth;
 
+    private bool disableSpawns = false;
+
     private void Start()
     {
         RoadManagerObject = gameObject.transform.parent.gameObject;
+        disableSpawns = RoadManagerObject.GetComponent<RoadManager>().disableObjectSpawn;
         UpdateRoads();
     }
 
@@ -52,6 +55,7 @@ public class RoadObjectRandomizer : MonoBehaviour
             if (newX > 5 || newX < -5) randomPosition += new Vector3(0, 0.2f, 0);
 
             Quaternion randomAngle = Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
+            if (disableSpawns) return;
             GameObject newSpawn = Instantiate(randomObstacle, randomPosition, randomAngle, this.gameObject.transform);
             spawnedObstacles.Add(newSpawn);
         }

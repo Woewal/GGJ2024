@@ -190,7 +190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 057f12724da0f1545bb8527665b08cfd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.64
+      value: 10.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 057f12724da0f1545bb8527665b08cfd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -363,6 +363,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 057f12724da0f1545bb8527665b08cfd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3714195273608267483}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 057f12724da0f1545bb8527665b08cfd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6792307035484022014}
     - targetCorrespondingSourceObject: {fileID: 4627575533841647452, guid: 057f12724da0f1545bb8527665b08cfd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1724542041313259271}
@@ -441,6 +444,27 @@ MonoBehaviour:
   CharacterController: {fileID: 0}
   HorizontalMovement: 10.5
   VerticalMovement: 6
+--- !u!65 &6792307035484022014
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757289601273285256}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.8665969, z: 3.2595325}
+  m_Center: {x: 0, y: 0.40546307, z: 0.070180975}
 --- !u!1 &1821200807050134732 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8222314832531279083, guid: 057f12724da0f1545bb8527665b08cfd, type: 3}
@@ -607,6 +631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TribuneCharacter (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355465005007628422, guid: b3ff6c26cf51b5342a9798da5f813925, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d3910b76e199665428e8a453dae01114, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -681,6 +709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TribuneCharacter (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355465005007628422, guid: b3ff6c26cf51b5342a9798da5f813925, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 087721f442172014bb828771775a9253, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -755,6 +787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TribuneCharacter (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355465005007628422, guid: b3ff6c26cf51b5342a9798da5f813925, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cf8a831babd950242a9a2ade3c918aa5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -829,6 +865,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TribuneCharacter (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355465005007628422, guid: b3ff6c26cf51b5342a9798da5f813925, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 21f31d588bbcdd540b9f7e05e15805ea, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -903,6 +943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TribuneCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 5355465005007628422, guid: b3ff6c26cf51b5342a9798da5f813925, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 849239809452fb8448cdb4eb1bad2127, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -977,6 +1021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TribuneCharacter (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355465005007628422, guid: b3ff6c26cf51b5342a9798da5f813925, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2be22f24cc16c4849bd38c7ee7a13f79, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1051,6 +1099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TribuneCharacter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355465005007628422, guid: b3ff6c26cf51b5342a9798da5f813925, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 087721f442172014bb828771775a9253, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1125,6 +1177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TribuneCharacter (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355465005007628422, guid: b3ff6c26cf51b5342a9798da5f813925, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 21f31d588bbcdd540b9f7e05e15805ea, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1199,6 +1255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TribuneCharacter (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355465005007628422, guid: b3ff6c26cf51b5342a9798da5f813925, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2be22f24cc16c4849bd38c7ee7a13f79, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1273,6 +1333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TribuneCharacter (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355465005007628422, guid: b3ff6c26cf51b5342a9798da5f813925, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 849239809452fb8448cdb4eb1bad2127, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1347,6 +1411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TribuneCharacter (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355465005007628422, guid: b3ff6c26cf51b5342a9798da5f813925, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cf8a831babd950242a9a2ade3c918aa5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
