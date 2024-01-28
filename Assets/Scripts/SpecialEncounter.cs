@@ -11,7 +11,6 @@ public class SpecialEncounter : MonoBehaviour
     private int differenceBetweenEncounter = 50;
 
     public GameObject Truck;
-    public Transform TruckLocation;
 
     public void ScoreChecker(int score)
     {
@@ -25,6 +24,6 @@ public class SpecialEncounter : MonoBehaviour
 
     void TruckEncounter()
     {
-        Instantiate(Truck,  new Vector3(0, 0, 660), Quaternion.identity, TruckLocation);
+        Truck.SetActive(true);
     }
 }

@@ -74,6 +74,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c96ba45622cf182591e221e2e4de656, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7051458856446352990}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c96ba45622cf182591e221e2e4de656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 94165373849493615}
   m_SourcePrefab: {fileID: 100100000, guid: 8c96ba45622cf182591e221e2e4de656, type: 3}
 --- !u!1 &5084516716276759923 stripped
 GameObject:
@@ -94,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSound:
   - {fileID: 8300000, guid: d9598a488e802484db445f85ab86f1ea, type: 3}
+  IsPositive: 0
 --- !u!65 &7051458856446352990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -115,3 +119,41 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.977885, y: 2.1484916, z: 2.1191592}
   m_Center: {x: -0.41907406, y: 1.1856211, z: 0.032818504}
+--- !u!114 &94165373849493615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5084516716276759923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197f983b4ffbde049a163e7972ddbafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetPrefab: {fileID: 3746720372687063315, guid: e2ab24d653657374c8867987b8a70690, type: 3}
+  SplashSound: {fileID: 0}
+  SpeedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
