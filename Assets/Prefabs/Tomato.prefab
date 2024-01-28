@@ -132,6 +132,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: f1fdb2d5be24f2449a807be58cc4edb2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 138c2a976461d8dfcb54ebe4e76fcf64, type: 2}
     - target: {fileID: -927199367670048503, guid: f1fdb2d5be24f2449a807be58cc4edb2, type: 3}
       propertyPath: m_Name
       value: Tomato
