@@ -43,7 +43,7 @@ public class ObstacleController : MonoBehaviour
             else
             {
                 Player.Gain();
-                ScoreManager.Instance.Score += 10;
+                ScoreManager.Instance.Score += 5;
             }
             ScoreManager.Instance.Score++;
         }
