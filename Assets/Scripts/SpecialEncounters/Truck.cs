@@ -37,6 +37,8 @@ public class Truck : MonoBehaviour
         //Changing the position
         float newZ = 1 * speed * Time.deltaTime;
         transform.position = new Vector3(transform.position.x + horizontalSpeed * Time.deltaTime, transform.position.y, transform.position.z - newZ);
+
+        if (transform.position.z <= 22f) transform.position = new Vector3(transform.position.x, transform.position.y, 22f);
         
         //Going left/right position
         if (horizontalSpeed >= 5f) horizontalSpeedChange = -0.03f;
