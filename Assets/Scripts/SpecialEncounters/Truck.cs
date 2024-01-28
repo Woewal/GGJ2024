@@ -38,24 +38,11 @@ public class Truck : MonoBehaviour
         float newZ = 1 * speed * Time.deltaTime;
         transform.position = new Vector3(transform.position.x + horizontalSpeed * Time.deltaTime, transform.position.y, transform.position.z - newZ);
 
-        if (transform.position.z <= 22f) transform.position = new Vector3(transform.position.x, transform.position.y, 22f);
-        
-        //Going left/right position
-        if (horizontalSpeed >= 5f) horizontalSpeedChange = -0.03f;
-        if (horizontalSpeed <= -5f) horizontalSpeedChange = 0.03f;
-        horizontalSpeed += horizontalSpeedChange;
-
         if (drivingForward)
         {
-            if (speed > -60) speed -= 0.2f;
-            if (speed <= -60) speed = -60;
-            if(transform.position.z >= 500) canThrown = false;
-            if(transform.position.z >= 700) gameObject.SetActive(false);
             return;
         }
 
-        //Forward speed position
-        if (transform.position.z <= 60) speed -= 0.2f;
         if (speed <= 0)
         {
             speed = 0;
@@ -63,6 +50,26 @@ public class Truck : MonoBehaviour
             isThrowing = true;
             StartCoroutine(ThrowCoroutine());
         }
+    }
+
+    private void FixedUpdate()
+    {
+        //Going left/right position
+        if (horizontalSpeed >= 5f) horizontalSpeedChange = -0.3f;
+        if (horizontalSpeed <= -5f) horizontalSpeedChange = 0.3f;
+        horizontalSpeed += horizontalSpeedChange;
+
+        if (drivingForward)
+        {
+            if (speed > -60) speed -= 1f;
+            if (speed <= -60) speed = -60;
+            if (transform.position.z >= 500) canThrown = false;
+            if (transform.position.z >= 700) gameObject.SetActive(false);
+            return;
+        }
+
+        //Forward speed position
+        if (transform.position.z <= 60) speed -= 1f;
     }
 
     IEnumerator ThrowCoroutine()
