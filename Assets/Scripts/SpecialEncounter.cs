@@ -10,7 +10,10 @@ public class SpecialEncounter : MonoBehaviour
     [SerializeField]
     private int differenceBetweenEncounter = 50;
 
+    private int startPointTrain = 75;
+
     public GameObject Truck;
+    public GameObject Train;
 
     public void ScoreChecker(int score)
     {
@@ -20,10 +23,20 @@ public class SpecialEncounter : MonoBehaviour
             startPointEncounter += differenceBetweenEncounter;
             TruckEncounter();
         }
+        if(score >= startPointTrain)
+        {
+            startPointTrain += differenceBetweenEncounter;
+            TrainEncounter();
+        }
     }
 
     void TruckEncounter()
     {
         Truck.SetActive(true);
+    }
+
+    void TrainEncounter()
+    {
+        Train.SetActive(true);
     }
 }
