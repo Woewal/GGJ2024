@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound:
-  - {fileID: 8300000, guid: d9598a488e802484db445f85ab86f1ea, type: 3}
-  - {fileID: 8300000, guid: d9598a488e802484db445f85ab86f1ea, type: 3}
+  - {fileID: 8300000, guid: 0261cf34c0a7b240186c509cf4ffad5b, type: 3}
+  - {fileID: 8300000, guid: 2c2b436121150994fa5a44eaf27160cc, type: 3}
   IsPositive: 0
 --- !u!65 &7051458856446352990
 BoxCollider:
