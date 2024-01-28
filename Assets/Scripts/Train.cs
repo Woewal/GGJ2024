@@ -11,10 +11,15 @@ public class Train : MonoBehaviour
 
     public Transform TrainSmokeTransform;
 
+    public AudioSource TrainSound;
+
+    bool playingSound = false;
+
     // Update is called once per frame
     void Update()
     {
         transform.position -= new Vector3(0, 0, 1) * speed * Time.deltaTime;
+        if (transform.position.z <= 300) PlaySound();
         if(transform.position.z <= -500)
         {
             DisableTrain();
@@ -30,6 +35,14 @@ public class Train : MonoBehaviour
     {
         gameObject.transform.position = new Vector3(10.2f, 3.8f, 660);
         StartCoroutine(SpawnSmoke());
+        playingSound = false;
+    }
+
+    void PlaySound()
+    {
+        if (playingSound) return;
+        playingSound = true;
+        TrainSound.Play();
     }
 
     IEnumerator SpawnSmoke()
