@@ -25,10 +25,13 @@ public class Truck : MonoBehaviour
     private bool drivingForward = false;
     private bool canThrown = true;
 
+    public Animator _anim;
+
     // Start is called before the first frame update
     void Start()
     {
         transform.eulerAngles = new Vector3(0, 180, 0);
+        _anim.SetBool("angry", true);
     }
 
     // Update is called once per frame
@@ -74,6 +77,10 @@ public class Truck : MonoBehaviour
 
     IEnumerator ThrowCoroutine()
     {
+        yield return new WaitForSeconds(1.0f);
+        _anim.SetBool("angry", false);
+        _anim.SetBool("cheer", true);
+        yield return new WaitForSeconds(0.5f);
         while (canThrown == true)
         {
             int randomNumber = Random.Range(0, ThrowObjects.Count);
@@ -103,5 +110,7 @@ public class Truck : MonoBehaviour
         horizontalSpeed = 5;
         horizontalSpeedChange = -0.03f;
         thrownObjects = 0;
+        _anim.SetBool("angry", true);
+        _anim.SetBool("cheer", false);
     }
 }
