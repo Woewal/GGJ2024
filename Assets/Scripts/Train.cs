@@ -22,6 +22,10 @@ public class Train : MonoBehaviour
         if (transform.position.z <= 300) PlaySound();
         if(transform.position.z <= -500)
         {
+            foreach(Transform child in TrainSmokeTransform)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
             DisableTrain();
         }
     }
