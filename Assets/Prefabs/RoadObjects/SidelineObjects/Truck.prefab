@@ -881,6 +881,7 @@ GameObject:
   - component: {fileID: 5212365608865001764}
   - component: {fileID: 8006281388449489043}
   - component: {fileID: 251088308135095768}
+  - component: {fileID: 5413456266115230618}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Untagged
@@ -923,6 +924,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 60
+  horizontalSpeed: 0
+  ThrowObjects: []
+  destination: {fileID: 0}
+  ThrowTransforms:
+  - {fileID: 714064656925616912}
+  HorizontalMovement: 7
+  VerticalMovement: 4.5
+  amountOfObjects: 15
+  extraObjectEachTruck: 5
 --- !u!65 &8006281388449489043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -942,8 +952,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.5205543, y: 2.0320382, z: 5.0785346}
-  m_Center: {x: -0.009923339, y: 1.0419614, z: 0.3721292}
+  m_Size: {x: 3.5205543, y: 2.0320382, z: 3.2109697}
+  m_Center: {x: -0.009923339, y: 1.0419614, z: -0.56165326}
 --- !u!54 &251088308135095768
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -971,6 +981,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &5413456266115230618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7718268621326359362}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.5355248, y: 0.65238756, z: 3.4128385}
+  m_Center: {x: -0.010224104, y: 0.35783628, z: 1.2064192}
 --- !u!1 &7925268921547602750
 GameObject:
   m_ObjectHideFlags: 0
